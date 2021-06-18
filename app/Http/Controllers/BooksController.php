@@ -7,7 +7,7 @@ use App\Traits\ApiResponse;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class BookController extends Controller
+class BooksController extends Controller
 {
     use ApiResponse;
 
@@ -114,7 +114,7 @@ class BookController extends Controller
 
         return $this->response(
             [],
-            "Book {$book->name} deleted sucessfully",
+            "Book {$book->title} deleted sucessfully",
             Response::HTTP_OK
         );
     }

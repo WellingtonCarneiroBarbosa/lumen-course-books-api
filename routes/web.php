@@ -17,8 +17,8 @@ $router->group(['prefix' => 'books'], function () use ($router) {
     $router->get("/", "BooksController@index");
     $router->post("/", "BooksController@store");
 
-    // Author id prefix routes
-    $router->group(['prefix' => "{author}"], function () use ($router) {
+    // Book id prefix routes
+    $router->group(['prefix' => "{book}"], function () use ($router) {
         $router->get("/", "BooksController@show");
         $router->put("/", "BooksController@update");
         $router->delete("/", "BooksController@destroy");
