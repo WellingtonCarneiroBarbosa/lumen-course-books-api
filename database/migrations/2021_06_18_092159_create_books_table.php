@@ -17,8 +17,11 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->string("title");
             $table->text("description");
+            $table->float("price", 8, 2);
+
             $table->unsignedBigInteger("author_id")
                     ->index();
+
             $table->timestamps();
         });
     }

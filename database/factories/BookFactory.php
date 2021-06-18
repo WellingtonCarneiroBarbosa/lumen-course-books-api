@@ -12,7 +12,10 @@ class BookFactory extends Factory
     public function definition(): array
     {
     	return [
-    	    //
+    	    'title'         => $this->faker->sentence(3, true),
+            'description'   => $this->faker->sentence(50, true),
+            'price'         => $this->faker->biasedNumberBetween(25, 300),
+            'author_id'     => $this->faker->biasedNumberBetween(1, 50),
     	];
     }
 }
